@@ -1,0 +1,13 @@
+@import 'styles/reset';
+@import 'styles/base';
+
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+}
+
+div{
+  &.container{
+    color: red;
+  }
+}
