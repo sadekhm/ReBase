@@ -1,3 +1,3 @@
 # ReBase
 
-Simple boilerplate for React JS apps using webpack Edit
+Simple boilerplate for React JS apps using webpack.
