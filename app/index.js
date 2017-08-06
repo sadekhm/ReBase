@@ -2,9 +2,22 @@
 /* Entry file */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
+import { render } from 'react-dom';
+import AppContainer from './AppContainer/index.js';
 
 require("./style.scss");
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(<AppContainer />, document.getElementById('root'));
+
+
+/************************************************
+    * This is used to enable hot reload for the 
+    * root of application and stop propagation
+    * while reloading 
+*************************************************/
+
+if (module.hot) {
+    module.hot.accept(() => {
+        render(<AppContainer />, document.getElementById('root'));
+    })
+}
